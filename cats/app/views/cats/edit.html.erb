@@ -1,0 +1,26 @@
+<form action="<%=cats_url%>" method='POST'>
+  <input type='hidden' name='_method' value='PATCH'>
+
+  <h1>Edit Cat Info: </h1>
+  <br>
+  <label for='name'>Name:</label>
+  <input type='text' name='cat[name]' id='name' value='<%=@cat.name%>'><br>
+
+  <label for='sex'>Sex:</label>
+  <input type='radio' name='cat[sex]' id='sex' value='M'<%= @cat.sex == "M" ? "checked='checked'" : "" %>>M
+  <input type='radio' name='cat[sex]' id='sex' value='F' <%= @cat.sex == "F" ? "checked='checked'" : "" %>>F<br>
+
+  <label for='birth_date'>Birth Date:</label>
+  <input type='date' name='cat[birth_date]' id='birth_date' value='<%=@cat.birth_date%>'><br>
+
+  <label for='color'>Color:</label>
+  <input type='text' name='cat[color]' id='color' value='<%=@cat.color%>'><br>
+  
+
+  <label for='description'>Description:</label>
+  <br>
+  <textarea rows='10' cols='30' name='cat[description]' id='description'>
+  <%= @cat.description %> </textarea>
+  <br><input type='submit' value='Submit'>
+
+</form>

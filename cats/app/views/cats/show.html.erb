@@ -1,0 +1,14 @@
+<ul>
+  <li> <%= @cat.name %> </li>
+  <li> <%= @cat.sex %> </li>
+  <li> <%= @cat.birth_date %> </li>
+  <li> <%= @cat.color %> </li>
+  <li> <%= @cat.description %> </li>
+  <% if @cat.name == 'David' %>
+    <p> I'm David. </p> 
+  <% end %>
+
+</ul>
+
+<a href="<%= edit_cat_url  %>">Edit Info</a>
+
